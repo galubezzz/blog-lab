@@ -127,3 +127,10 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'index'
 
 LOGOUT_REDIRECT_URL = 'index'
+
+
+# Uploads
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = 'uploads'
