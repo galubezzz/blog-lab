@@ -1,0 +1,23 @@
+{%  extends 'base.html' %}
+
+{% block title %}Статьи{% endblock %}
+
+{% block content %}
+    {% for article in article_list %}
+        <div class="card mt-3">
+            <div class="card-header">
+                <h2 class="card-title card-text"><a href="#" class="card-link">{{ article.title }}</a></h2>
+            </div>
+            <div class="card-body">
+                <div class="img-wrapper">
+                    {% if article.image %}
+                        <img class="card-img" src="{{ article.image.url }}" alt="{{ article.image.name }}">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card-footer">
+                <p class="card-text">{{ article.author }} | {{ article.created_at }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
